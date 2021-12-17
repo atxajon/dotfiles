@@ -14,7 +14,8 @@ unsetopt nomatch
 
 # Nicer prompt.
 #export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"$'\n'"$ "
-export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"$'\n'" [%/] $ "
+#export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"$'\n'" [%/] $ "
+export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"$'\n'" [%1~] $ "
 
 # Enable plugins.
 plugins=(git brew history kubectl history-substring-search)
