@@ -1,0 +1,1 @@
+alias composer='docker run --rm -it -v "${CURDIR}":/app -v ${COMPOSER_HOME:-$HOME/.composer}:/tmp composer '
