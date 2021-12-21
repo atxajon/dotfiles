@@ -55,6 +55,10 @@ alias gp='git pull --rebase'
 alias gcam='git commit -am'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
+# Composer dockerized alias.
+alias composer='docker run --rm -it -v "${CURDIR}":"${CURDIR}" -v ${COMPOSER_HOME:-$HOME/.composer}:/tmp composer '
+alias composer1='docker run --rm -it -v "${CURDIR}":"${CURDIR}" -v ${COMPOSER_HOME:-$HOME/.composer}:/tmp composer:1 '
+
 # Completions.
 autoload -Uz compinit && compinit
 # Case insensitive.
