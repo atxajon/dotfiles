@@ -134,3 +134,6 @@ export COMPOSER_MEMORY_LIMIT=-1
 #trap prod_command_trap DEBUG
 
 alias myip="curl http://ipecho.net/plain; echo"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
