@@ -60,8 +60,8 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Set background to dark-grey color
-#osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Stone.png"'
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${HOME}/www/ansible-mac/dotfiles/nin.jpeg"'
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Stone.png"'
+#osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${HOME}/www/ansible-mac/dotfiles/nin.jpeg"'
 
 
 ###############################################################################
@@ -171,13 +171,24 @@ chflags nohidden ~/Library
 defaults write com.apple.dock tilesize -int 40
 
 # Speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.15
+defaults write com.apple.dock expose-animation-duration -float 0.05
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
 # Enable the 'reduce transparency' option. Save GPU cycles.
 defaults write com.apple.universalaccess reduceTransparency -bool true
+
+#https://tekdeeps.com/how-to-speed-up-any-mac-two-times-in-30-seconds-not-everyone-will-like-it/
+# Turn off animations of dialog boxes for saving files (to return it to what it was use 0.2)
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Turn off dock icons clicking jumping animation. (set back to true if wanted)
+defaults write com.apple.dock launchanim -bool false
+
+# Mission control enable group windows by application.
+defaults write com.apple.dock expose-group-apps -bool true
+
 
 # Hot corners
 # Possible values:

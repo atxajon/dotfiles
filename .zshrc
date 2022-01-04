@@ -137,3 +137,5 @@ alias myip="curl http://ipecho.net/plain; echo"
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
